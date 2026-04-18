@@ -7,6 +7,10 @@ export default class Pedido extends Model{
             foreignKey: 'pedido_id',
             as: 'entrega'
         })
+        Pedido.hasMany(models.Avaliacao, {
+  foreignKey: 'pedidoId',
+  as: 'avaliacoes'
+        });
     }
 };
 
